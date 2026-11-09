@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b1020" />
+  <title>Live Time — World Clock</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Live Time home"><span class="brand-mark">◷</span> LIVE TIME</a>
+      <span class="live-indicator"><i></i> LIVE</span>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">YOUR MOMENT, RIGHT NOW</p>
+      <h1>Time, <span>in real time.</span></h1>
+      <p class="subheading">A clean, live clock for wherever life takes you.</p>
+    </section>
+
+    <section class="clock-card" aria-label="Current time">
+      <div class="clock-meta">
+        <span id="locationLabel">New Delhi, India</span>
+        <span id="dateLabel">Loading date…</span>
+      </div>
+      <div class="time-row">
+        <div id="timeDisplay" class="time-display">--:--:--</div>
+        <span id="period" class="period"></span>
+      </div>
+      <div class="clock-footer">
+        <span class="timezone" id="timezoneLabel">Asia/Kolkata</span>
+        <span class="seconds-note"><i></i> Updating every second</span>
+      </div>
+    </section>
+
+    <section class="controls">
+      <label class="field">
+        <span>Choose a time zone</span>
+        <select id="timezoneSelect">
+          <option value="Asia/Kolkata" data-label="New Delhi, India">New Delhi, India</option>
+          <option value="Asia/Dubai" data-label="Dubai, UAE">Dubai, UAE</option>
+          <option value="Europe/London" data-label="London, UK">London, UK</option>
+          <option value="Europe/Paris" data-label="Paris, France">Paris, France</option>
+          <option value="America/New_York" data-label="New York, USA">New York, USA</option>
+          <option value="America/Los_Angeles" data-label="Los Angeles, USA">Los Angeles, USA</option>
+          <option value="Asia/Tokyo" data-label="Tokyo, Japan">Tokyo, Japan</option>
+          <option value="Asia/Singapore" data-label="Singapore">Singapore</option>
+          <option value="Australia/Sydney" data-label="Sydney, Australia">Sydney, Australia</option>
+          <option value="Pacific/Auckland" data-label="Auckland, New Zealand">Auckland, New Zealand</option>
+        </select>
+      </label>
+      <div class="format-control">
+        <span>Time format</span>
+        <div class="toggle" role="group" aria-label="Time format">
+          <button id="format12" class="format-btn active" type="button">12-hour</button>
+          <button id="format24" class="format-btn" type="button">24-hour</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="mini-grid" aria-label="Other time zones">
+      <article class="mini-card">
+        <span class="mini-city">New York</span><strong id="nyTime">--:--</strong><small>USA · Eastern</small>
+      </article>
+      <article class="mini-card">
+        <span class="mini-city">London</span><strong id="londonTime">--:--</strong><small>United Kingdom</small>
+      </article>
+      <article class="mini-card">
+        <span class="mini-city">Tokyo</span><strong id="tokyoTime">--:--</strong><small>Japan</small>
+      </article>
+    </section>
+
+    <footer class="footer">Made for the present moment <span>✦</span> Your device's clock powers this app.</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
